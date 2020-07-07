@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: segment_web_page_views_union
+    description: "{{doc('segment_web_page_views_union')}}"
+    columns:
+      - name: page_view_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+- name: segment_studio
+  database: segment_prod
+  schema: studio_production
+
+  tables:
+  - name: pages
+
+- name: segment_premiumbeat
+  database: segment_prod
+  schema: premiumbeat
+
+  tables:
+  - name: pages

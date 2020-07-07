@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{var('segment_page_views_table')}}
+    select * from {{ref('segment_web_page_views_union')}}
 
 ),
 
@@ -69,4 +69,6 @@ final as (
 
 )
 
+--- Temporarily restrict this to a short time period until we're happy
 select * from final
+where received_at_tstamp     > DATE('2020-07-01')
